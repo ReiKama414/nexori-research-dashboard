@@ -1,0 +1,479 @@
+<div data-nx="root" style="display:grid;grid-template-columns:356px minmax(0,1fr) 400px;grid-template-rows:auto minmax(0,1fr) 236px auto;gap:11px;padding:12px 14px 10px;height:100vh;min-height:860px;box-sizing:border-box;background:radial-gradient(1200px 700px at 50% 32%,rgba(54,124,255,.11),rgba(5,10,22,0) 72%),radial-gradient(700px 500px at 88% 88%,rgba(217,92,255,.05),rgba(5,10,22,0) 70%),linear-gradient(rgba(140,203,255,.026) 1px,transparent 1px) 0 0/52px 52px,linear-gradient(90deg,rgba(140,203,255,.026) 1px,transparent 1px) 0 0/52px 52px,#050A16;color:#E7F2FF;font-family:'Chakra Petch',sans-serif">
+
+  <!-- ===== HEADER ===== -->
+  <header data-nx="span" data-hdr="1" style="grid-column:1/4;display:grid;grid-template-columns:auto minmax(0,1fr) auto;align-items:center;gap:22px;padding:2px 2px 9px;border-bottom:1px solid rgba(140,203,255,.16);background:linear-gradient(90deg,rgba(54,124,255,.10),rgba(5,10,22,0) 45%)">
+    <div style="display:flex;align-items:center;gap:13px">
+      <svg width="34" height="38" viewBox="0 0 34 38" aria-hidden="true">
+        <path d="M17 1.5 L32.5 10.2 L32.5 27.8 L17 36.5 L1.5 27.8 L1.5 10.2 Z" fill="none" stroke="#8CCBFF" stroke-width="1.1"></path>
+        <path d="M17 6.4 L28.2 12.7 L28.2 25.3 L17 31.6 L5.8 25.3 L5.8 12.7 Z" fill="rgba(54,124,255,.10)" stroke="rgba(140,203,255,.45)" stroke-width="0.7"></path>
+        <path d="M17 6.4 L17 31.6 M5.8 12.7 L28.2 25.3 M28.2 12.7 L5.8 25.3" stroke="rgba(140,203,255,.28)" stroke-width="0.6"></path>
+        <path d="M17 13.2 L21.6 15.8 L21.6 21 L17 23.6 L12.4 21 L12.4 15.8 Z" fill="rgba(217,92,255,.30)" stroke="#D95CFF" stroke-width="0.9"></path>
+        <path d="M1.5 10.2 L1.5 5.5 M32.5 27.8 L32.5 32.5" stroke="#D95CFF" stroke-width="1.1"></path>
+      </svg>
+      <div style="display:flex;flex-direction:column;gap:3px">
+        <span style="font:700 21px 'Orbitron',sans-serif;letter-spacing:.30em;color:#E7F2FF;line-height:1">NEXORI</span>
+        <span style="font:500 8.5px 'Chakra Petch',sans-serif;letter-spacing:.36em;color:#7D96B5">UNKNOWN MATTER RESEARCH</span>
+      </div>
+      <span style="width:1px;height:34px;background:linear-gradient(180deg,rgba(140,203,255,0),rgba(140,203,255,.35),rgba(140,203,255,0));margin:0 6px"></span>
+      <div style="display:flex;flex-direction:column;gap:3px">
+        <span style="font:400 11px 'Noto Sans JP',sans-serif;letter-spacing:.26em;color:rgba(231,242,255,.80)">未知を、識る。</span>
+        <span style="font:500 8px 'Chakra Petch',sans-serif;letter-spacing:.28em;color:#7D96B5">WHAT LIES BEYOND, WE OBSERVE.</span>
+      </div>
+    </div>
+
+    <div style="display:flex;align-items:center;gap:12px;justify-self:center">
+      <span style="font:500 8.5px 'Chakra Petch',sans-serif;letter-spacing:.26em;color:#7D96B5">SPECIMEN</span>
+      <span style="font:600 16px 'JetBrains Mono',monospace;letter-spacing:.14em;color:#E7F2FF">AX-77B</span>
+      <span style="display:inline-flex;align-items:center;gap:7px;padding:4px 11px;border:1px solid {{ lvColorSoft }};background:{{ lvWash }};clip-path:polygon(0 0,100% 0,100% calc(100% - 7px),calc(100% - 7px) 100%,0 100%)">
+        <span style="width:6px;height:6px;background:{{ lvColor }};animation:nxBlink 1.7s steps(1,end) infinite"></span>
+        <span style="font:600 9.5px 'Chakra Petch',sans-serif;letter-spacing:.22em;color:{{ lvColor }}">{{ lvName }}</span>
+      </span>
+    </div>
+
+    <div style="display:flex;align-items:center;gap:16px">
+      <div style="display:flex;flex-direction:column;align-items:flex-end;gap:3px">
+        <span style="font:500 12px 'JetBrains Mono',monospace;color:rgba(231,242,255,.85);letter-spacing:.04em">{{ clock }}</span>
+        <span style="font:500 8px 'Chakra Petch',sans-serif;letter-spacing:.24em;color:#7D96B5">SESSION NX-4417 · LINK STABLE</span>
+      </div>
+      <span style="padding:5px 10px;border:1px solid rgba(217,92,255,.38);background:rgba(217,92,255,.07);font:600 8.5px 'Chakra Petch',sans-serif;letter-spacing:.22em;color:#D95CFF;clip-path:polygon(7px 0,100% 0,100% 100%,0 100%,0 7px)">模擬資料 SIMULATED</span>
+    </div>
+  </header>
+
+  <!-- ===== LEFT COLUMN ===== -->
+  <div data-nx="col" style="display:flex;flex-direction:column;gap:11px;min-height:0;overflow-y:auto;overflow-x:hidden;padding-right:2px">
+
+    <section style="position:relative;display:flex;padding:1px;background:linear-gradient(150deg,rgba(140,203,255,.42),rgba(54,124,255,.10) 42%,rgba(140,203,255,.24));clip-path:polygon(0 15px,15px 0,100% 0,100% calc(100% - 15px),calc(100% - 15px) 100%,0 100%)">
+      <div style="flex:1;display:flex;flex-direction:column;background:linear-gradient(168deg,rgba(8,18,37,.95),rgba(5,10,22,.97));clip-path:polygon(0 14px,14px 0,100% 0,100% calc(100% - 14px),calc(100% - 14px) 100%,0 100%)">
+        <div style="display:flex;align-items:center;gap:9px;padding:9px 13px 8px;border-bottom:1px solid rgba(140,203,255,.16);background:linear-gradient(90deg,rgba(54,124,255,.16),rgba(54,124,255,0) 62%)">
+          <span style="width:3px;height:13px;background:linear-gradient(180deg,#8CCBFF,#367CFF)"></span>
+          <span style="font:600 11.5px 'Chakra Petch',sans-serif;letter-spacing:.18em;color:#E7F2FF">SPECIMEN RECORD</span>
+          <span style="font:500 10px 'Chakra Petch',sans-serif;color:rgba(140,203,255,.28)">//</span>
+          <span style="font:400 9.5px 'Noto Sans JP',sans-serif;letter-spacing:.14em;color:rgba(140,203,255,.52)">試料情報</span>
+          <span style="margin-left:auto;font:500 8.5px 'JetBrains Mono',monospace;color:#7D96B5">REC.0001</span>
+        </div>
+        <div style="padding:12px 13px 13px">
+          <div style="display:flex;align-items:flex-start;justify-content:space-between;gap:12px">
+            <div style="min-width:0">
+              <div style="font:500 8.5px 'Chakra Petch',sans-serif;letter-spacing:.26em;color:#7D96B5">SAMPLE ID</div>
+              <div style="font:700 31px 'Orbitron',sans-serif;letter-spacing:.06em;color:#E7F2FF;line-height:1.2;margin-top:2px">AX-77B</div>
+              <div style="font:500 10px 'Chakra Petch',sans-serif;letter-spacing:.2em;color:rgba(140,203,255,.62);margin-top:2px">UNKNOWN MATERIAL</div>
+            </div>
+            <div style="width:66px;height:66px;flex:none;position:relative;border:1px solid rgba(140,203,255,.22);background:rgba(5,10,22,.7);clip-path:polygon(0 0,100% 0,100% calc(100% - 9px),calc(100% - 9px) 100%,0 100%)">
+              <x-import component-from-global-scope="mineral-view" from="./nexori-3d.js" mode="surface" yaw="0.6" pitch="0.15" fill="0.82" style="position:absolute;inset:0" hint-size="100%,100%"></x-import>
+            </div>
+          </div>
+          <div style="display:flex;align-items:center;gap:8px;margin:11px 0 10px">
+            <span style="font:600 9px 'Chakra Petch',sans-serif;letter-spacing:.22em;color:#7D96B5">HAZARD LEVEL</span>
+            <span style="flex:1;height:1px;background:linear-gradient(90deg,{{ lvColorSoft }},rgba(140,203,255,0))"></span>
+            <span style="font:700 11px 'Chakra Petch',sans-serif;letter-spacing:.18em;color:{{ lvColor }}">{{ riskWord }}</span>
+          </div>
+          <div style="display:grid;grid-template-columns:auto minmax(0,1fr);gap:6px 12px;align-items:baseline">
+            <span style="font:500 8.5px 'Chakra Petch',sans-serif;letter-spacing:.2em;color:#7D96B5">ORIGIN</span>
+            <span style="font:500 11px 'JetBrains Mono',monospace;color:#E7F2FF;text-align:right">Deep Space · Sector K-9</span>
+            <span style="font:500 8.5px 'Chakra Petch',sans-serif;letter-spacing:.2em;color:#7D96B5">DISCOVERY</span>
+            <span style="font:500 11px 'JetBrains Mono',monospace;color:#E7F2FF;text-align:right">2026.08.28 03:14:21</span>
+            <span style="font:500 8.5px 'Chakra Petch',sans-serif;letter-spacing:.2em;color:#7D96B5">LOCATION</span>
+            <span style="font:500 11px 'JetBrains Mono',monospace;color:#E7F2FF;text-align:right">Abyssal Trench · 7,842 m</span>
+            <span style="font:500 8.5px 'Chakra Petch',sans-serif;letter-spacing:.2em;color:#7D96B5">CLASS</span>
+            <span style="font:500 11px 'JetBrains Mono',monospace;color:#E7F2FF;text-align:right">Non-terrestrial</span>
+            <span style="font:500 8.5px 'Chakra Petch',sans-serif;letter-spacing:.2em;color:#7D96B5">STATE</span>
+            <span style="font:500 11px 'JetBrains Mono',monospace;color:{{ lvColor }};text-align:right">{{ stateWord }}</span>
+          </div>
+          <div style="display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:1px;margin-top:11px;background:rgba(140,203,255,.14)">
+            <div style="background:rgba(5,10,22,.85);padding:7px 9px">
+              <div style="font:500 8px 'Chakra Petch',sans-serif;letter-spacing:.18em;color:#7D96B5">MASS</div>
+              <div style="font:500 13px 'JetBrains Mono',monospace;color:#E7F2FF">1.248<span style="font-size:9px;color:#7D96B5"> kg</span></div>
+            </div>
+            <div style="background:rgba(5,10,22,.85);padding:7px 9px">
+              <div style="font:500 8px 'Chakra Petch',sans-serif;letter-spacing:.18em;color:#7D96B5">DENSITY</div>
+              <div style="font:500 13px 'JetBrains Mono',monospace;color:#E7F2FF">5.72<span style="font-size:9px;color:#7D96B5"> g/cm³</span></div>
+            </div>
+            <div style="background:rgba(5,10,22,.85);padding:7px 9px">
+              <div style="font:500 8px 'Chakra Petch',sans-serif;letter-spacing:.18em;color:#7D96B5">HARDNESS</div>
+              <div style="font:500 13px 'JetBrains Mono',monospace;color:#E7F2FF">4.5<span style="font-size:9px;color:#7D96B5"> Mohs</span></div>
+            </div>
+          </div>
+          <div style="margin-top:12px;padding-top:11px;border-top:1px solid rgba(140,203,255,.12)">
+            <div style="font:300 11px 'Noto Sans JP',sans-serif;line-height:1.85;letter-spacing:.1em;color:rgba(231,242,255,.62)">「これは、ただの鉱物ではない。<br />まだ、何かが眠っている。」</div>
+            <div style="font:500 8px 'Chakra Petch',sans-serif;letter-spacing:.24em;color:#7D96B5;margin-top:6px">MORE THAN A MINERAL. SOMETHING STILL SLEEPS WITHIN.</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section style="position:relative;display:flex;padding:1px;background:linear-gradient(150deg,rgba(140,203,255,.36),rgba(54,124,255,.10) 45%,rgba(140,203,255,.22));clip-path:polygon(0 15px,15px 0,100% 0,100% calc(100% - 15px),calc(100% - 15px) 100%,0 100%)">
+      <div style="flex:1;display:flex;flex-direction:column;background:linear-gradient(168deg,rgba(8,18,37,.95),rgba(5,10,22,.97));clip-path:polygon(0 14px,14px 0,100% 0,100% calc(100% - 14px),calc(100% - 14px) 100%,0 100%)">
+        <div style="display:flex;align-items:center;gap:9px;padding:9px 13px 8px;border-bottom:1px solid rgba(140,203,255,.16);background:linear-gradient(90deg,rgba(54,124,255,.16),rgba(54,124,255,0) 62%)">
+          <span style="width:3px;height:13px;background:linear-gradient(180deg,#8CCBFF,#367CFF)"></span>
+          <span style="font:600 11.5px 'Chakra Petch',sans-serif;letter-spacing:.18em;color:#E7F2FF;white-space:nowrap">ELEMENTAL COMPOSITION</span>
+          <span style="font:500 10px 'Chakra Petch',sans-serif;color:rgba(140,203,255,.28)">//</span>
+          <span style="font:400 9.5px 'Noto Sans JP',sans-serif;letter-spacing:.14em;color:rgba(140,203,255,.52);white-space:nowrap">元素組成</span>
+          <span style="margin-left:auto;font:500 8.5px 'JetBrains Mono',monospace;color:#7D96B5;white-space:nowrap">XRF</span>
+        </div>
+        <div style="padding:10px 13px 12px">
+          <sc-for list="{{ elements }}" as="el" hint-placeholder-count="7">
+            <div style="display:grid;grid-template-columns:74px minmax(0,1fr) 44px;align-items:center;gap:10px;padding:4px 0">
+              <span style="font:500 10.5px 'JetBrains Mono',monospace;color:rgba(231,242,255,.72)">{{ el.name }}</span>
+              <span style="position:relative;display:block;height:6px;background:linear-gradient(90deg,rgba(140,203,255,.10),rgba(140,203,255,.04));border-left:1px solid rgba(140,203,255,.25)">
+                <span style="position:absolute;left:0;top:0;bottom:0;background:{{ el.bar }};width:{{ el.w }};transition:width .7s cubic-bezier(.2,.8,.2,1)"></span>
+                <span style="position:absolute;top:-2px;bottom:-2px;width:1px;background:{{ el.tip }};left:{{ el.w }}"></span>
+              </span>
+              <span style="font:600 10.5px 'JetBrains Mono',monospace;color:#E7F2FF;text-align:right">{{ el.pct }}</span>
+            </div>
+          </sc-for>
+          <div style="display:flex;align-items:center;justify-content:space-between;margin-top:9px;padding-top:9px;border-top:1px solid rgba(140,203,255,.12)">
+            <span style="font:400 9.5px 'Noto Sans JP',sans-serif;letter-spacing:.08em;color:#7D96B5">同定率 · IDENTIFIED</span>
+            <span style="font:600 11px 'JetBrains Mono',monospace;color:#8CCBFF">58.8 %</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section style="position:relative;display:flex;padding:1px;flex:1;min-height:186px;background:linear-gradient(150deg,rgba(140,203,255,.36),rgba(54,124,255,.10) 45%,rgba(140,203,255,.22));clip-path:polygon(0 15px,15px 0,100% 0,100% calc(100% - 15px),calc(100% - 15px) 100%,0 100%)">
+      <div style="flex:1;display:flex;flex-direction:column;min-height:0;background:linear-gradient(168deg,rgba(8,18,37,.95),rgba(5,10,22,.97));clip-path:polygon(0 14px,14px 0,100% 0,100% calc(100% - 14px),calc(100% - 14px) 100%,0 100%)">
+        <div style="display:flex;align-items:center;gap:9px;padding:9px 13px 8px;border-bottom:1px solid rgba(140,203,255,.16);background:linear-gradient(90deg,rgba(54,124,255,.16),rgba(54,124,255,0) 62%)">
+          <span style="width:3px;height:13px;background:linear-gradient(180deg,#8CCBFF,#367CFF)"></span>
+          <span style="font:600 11.5px 'Chakra Petch',sans-serif;letter-spacing:.18em;color:#E7F2FF;white-space:nowrap">SPECTRAL ANALYSIS</span>
+          <span style="font:500 10px 'Chakra Petch',sans-serif;color:rgba(140,203,255,.28)">//</span>
+          <span style="font:400 9.5px 'Noto Sans JP',sans-serif;letter-spacing:.14em;color:rgba(140,203,255,.52);white-space:nowrap">分光分析</span>
+          <span style="margin-left:auto;font:500 8.5px 'JetBrains Mono',monospace;color:#7D96B5;white-space:nowrap">λ 200–2000</span>
+        </div>
+        <div style="display:flex;gap:4px;padding:9px 13px 5px">
+          <sc-for list="{{ specTabs }}" as="tab" hint-placeholder-count="4">
+            <button type="button" onClick="{{ tab.pick }}" style="flex:1;padding:5px 0;background:{{ tab.bg }};border:1px solid {{ tab.bc }};color:{{ tab.fg }};font:600 8.5px 'Chakra Petch',sans-serif;letter-spacing:.14em;cursor:pointer;clip-path:polygon(0 0,100% 0,100% calc(100% - 5px),calc(100% - 5px) 100%,0 100%)" style-hover="border-color:#8CCBFF;color:#E7F2FF">{{ tab.name }}</button>
+          </sc-for>
+        </div>
+        <div style="flex:1;min-height:96px;position:relative;margin:4px 13px 2px;border:1px solid rgba(140,203,255,.12);background:linear-gradient(rgba(140,203,255,.03) 1px,transparent 1px) 0 0/100% 25%,linear-gradient(90deg,rgba(140,203,255,.03) 1px,transparent 1px) 0 0/12.5% 100%,rgba(5,10,22,.6)">
+          <svg viewBox="0 0 260 110" preserveAspectRatio="none" style="position:absolute;inset:0;width:100%;height:100%">
+            <sc-for list="{{ spectra }}" as="sp" hint-placeholder-count="4">
+              <path d="{{ sp.d }}" fill="none" stroke="{{ sp.c }}" stroke-width="{{ sp.w }}" stroke-opacity="{{ sp.o }}" vector-effect="non-scaling-stroke"></path>
+            </sc-for>
+            <line x1="{{ scanX }}" y1="0" x2="{{ scanX }}" y2="110" stroke="#D95CFF" stroke-width="1" stroke-opacity="0.45" vector-effect="non-scaling-stroke"></line>
+          </svg>
+          <div style="position:absolute;left:7px;top:6px;padding:2px 7px;background:rgba(5,10,22,.85);border-left:2px solid #D95CFF;font:500 8.5px 'JetBrains Mono',monospace;color:#D95CFF">PEAK λ {{ peakLambda }} nm</div>
+          <sc-if value="{{ anomaly }}" hint-placeholder-val="{{ false }}">
+            <div style="position:absolute;right:7px;top:6px;padding:2px 7px;background:rgba(255,65,108,.12);border:1px solid rgba(255,65,108,.45);font:600 8px 'Chakra Petch',sans-serif;letter-spacing:.14em;color:#FF416C">ANOMALOUS PEAK</div>
+          </sc-if>
+        </div>
+        <div style="display:flex;justify-content:space-between;padding:2px 13px 10px;font:500 8px 'JetBrains Mono',monospace;color:#7D96B5">
+          <span>200</span><span>600</span><span>1,000</span><span>1,400</span><span>1,800</span><span>(nm)</span>
+        </div>
+      </div>
+    </section>
+  </div>
+
+  <!-- ===== CENTER STAGE ===== -->
+  <div data-nx="stage" style="position:relative;min-height:0;display:flex;padding:1px;background:linear-gradient(160deg,rgba(140,203,255,.34),rgba(54,124,255,.08) 45%,rgba(217,92,255,.18));clip-path:polygon(0 22px,22px 0,100% 0,100% calc(100% - 22px),calc(100% - 22px) 100%,0 100%)">
+    <div style="flex:1;position:relative;overflow:hidden;background:radial-gradient(58% 52% at 50% 46%,rgba(54,124,255,.15),rgba(5,10,22,0) 74%),linear-gradient(180deg,rgba(8,18,37,.55),rgba(5,10,22,.86));clip-path:polygon(0 21px,21px 0,100% 0,100% calc(100% - 21px),calc(100% - 21px) 100%,0 100%)">
+      <div style="position:absolute;inset:0;background:linear-gradient(rgba(140,203,255,.024) 1px,transparent 1px) 0 0/38px 38px,linear-gradient(90deg,rgba(140,203,255,.024) 1px,transparent 1px) 0 0/38px 38px;pointer-events:none"></div>
+      <div style="position:absolute;left:8%;right:8%;top:12%;bottom:12%;border:1px solid rgba(140,203,255,.055);pointer-events:none"></div>
+      <div style="position:absolute;left:50%;top:0;bottom:0;width:1px;background:linear-gradient(180deg,rgba(140,203,255,0),rgba(140,203,255,.10),rgba(140,203,255,0));pointer-events:none"></div>
+      <div style="position:absolute;left:0;right:0;top:50%;height:1px;background:linear-gradient(90deg,rgba(140,203,255,0),rgba(140,203,255,.08),rgba(140,203,255,0));pointer-events:none"></div>
+      <div style="position:absolute;left:0;right:0;top:0;height:1px;background:linear-gradient(90deg,transparent,rgba(140,203,255,.55),transparent);animation:nxSweep 11s linear infinite;pointer-events:none"></div>
+
+      <x-import component-from-global-scope="mineral-core" from="./nexori-3d.js" mode="{{ mode }}" slice="{{ sliceVal }}" autorotate="{{ autoAttr }}" alert="{{ alertAmt }}" style="position:absolute;inset:0" hint-size="100%,100%"></x-import>
+
+      <div style="position:absolute;left:16px;top:13px;display:flex;align-items:center;gap:9px;pointer-events:none">
+        <span style="width:3px;height:13px;background:linear-gradient(180deg,#8CCBFF,#367CFF)"></span>
+        <span style="font:600 12px 'Chakra Petch',sans-serif;letter-spacing:.2em;color:#E7F2FF">3D ANALYSIS</span>
+        <span style="font:500 10px 'Chakra Petch',sans-serif;color:rgba(140,203,255,.28)">//</span>
+        <span style="font:400 9.5px 'Noto Sans JP',sans-serif;letter-spacing:.14em;color:rgba(140,203,255,.5)">立体解析 · REAL-TIME SCAN</span>
+      </div>
+
+      <div style="position:absolute;right:16px;top:11px;display:flex;align-items:center;gap:9px">
+        <span style="font:400 10px 'Noto Sans JP',sans-serif;letter-spacing:.18em;color:rgba(140,203,255,.55);animation:nxPulse 2.8s ease-in-out infinite">観測中…</span>
+        <button type="button" onClick="{{ toggleAuto }}" style="display:flex;align-items:center;gap:7px;padding:5px 12px;background:{{ autoBg }};border:1px solid {{ autoBc }};color:{{ autoFg }};font:600 9px 'Chakra Petch',sans-serif;letter-spacing:.2em;cursor:pointer;clip-path:polygon(0 0,100% 0,100% calc(100% - 6px),calc(100% - 6px) 100%,0 100%)" style-hover="border-color:#8CCBFF">
+          <span style="width:5px;height:5px;background:{{ autoFg }}"></span>AUTO SCAN
+        </button>
+      </div>
+
+      <div data-nx="stagerail" style="position:absolute;left:16px;top:54px;display:flex;flex-direction:column;gap:5px;width:132px">
+        <span style="font:600 8.5px 'Chakra Petch',sans-serif;letter-spacing:.24em;color:#7D96B5;margin-bottom:2px">SCAN LAYERS</span>
+        <sc-for list="{{ modes }}" as="m" hint-placeholder-count="5">
+          <button type="button" onClick="{{ m.pick }}" style="display:flex;align-items:center;gap:9px;padding:7px 10px;background:{{ m.bg }};border:1px solid {{ m.bc }};color:{{ m.fg }};font:600 9px 'Chakra Petch',sans-serif;letter-spacing:.17em;cursor:pointer;text-align:left;clip-path:polygon(0 0,100% 0,100% calc(100% - 6px),calc(100% - 6px) 100%,0 100%)" style-hover="border-color:#8CCBFF;color:#E7F2FF">
+            <span style="width:7px;height:7px;transform:rotate(45deg);border:1px solid {{ m.fg }};background:{{ m.dot }}"></span>{{ m.name }}
+          </button>
+        </sc-for>
+        <sc-if value="{{ sliceOpen }}" hint-placeholder-val="{{ false }}">
+          <div style="margin-top:4px;padding:8px 10px;background:rgba(5,10,22,.78);border:1px solid rgba(140,203,255,.2)">
+            <div style="font:500 8px 'Chakra Petch',sans-serif;letter-spacing:.18em;color:#7D96B5;margin-bottom:7px">SECTION DEPTH</div>
+            <div style="display:flex;gap:3px">
+              <sc-for list="{{ depths }}" as="d" hint-placeholder-count="5">
+                <button type="button" onClick="{{ d.pick }}" style="flex:1;height:21px;background:{{ d.bg }};border:1px solid {{ d.bc }};color:{{ d.fg }};font:600 8px 'JetBrains Mono',monospace;cursor:pointer">{{ d.label }}</button>
+              </sc-for>
+            </div>
+          </div>
+        </sc-if>
+      </div>
+
+      <div style="position:absolute;left:16px;bottom:16px;display:flex;flex-direction:column;gap:8px;pointer-events:none">
+        <sc-for list="{{ dims }}" as="dm" hint-placeholder-count="4">
+          <div style="display:flex;align-items:baseline;gap:8px">
+            <span style="font:600 17px 'JetBrains Mono',monospace;color:#E7F2FF">{{ dm.v }}</span>
+            <span style="font:500 8px 'Chakra Petch',sans-serif;letter-spacing:.2em;color:#7D96B5">{{ dm.k }}</span>
+          </div>
+        </sc-for>
+      </div>
+
+      <div style="position:absolute;right:16px;top:58px;display:flex;flex-direction:column;gap:9px;width:176px;pointer-events:none">
+        <div style="display:flex;flex-direction:column;gap:2px;align-items:flex-end">
+          <span style="font:600 12px 'JetBrains Mono',monospace;letter-spacing:.12em;color:#D95CFF">AX-77B</span>
+          <span style="font:500 8px 'Chakra Petch',sans-serif;letter-spacing:.2em;color:#7D96B5">REAL-TIME SCAN · 3D MODEL</span>
+        </div>
+        <div style="padding:9px 11px;background:rgba(5,10,22,.72);border:1px solid rgba(140,203,255,.18);clip-path:polygon(0 0,100% 0,100% calc(100% - 8px),calc(100% - 8px) 100%,0 100%)">
+          <div style="display:flex;justify-content:space-between;align-items:baseline">
+            <span style="font:500 8px 'Chakra Petch',sans-serif;letter-spacing:.2em;color:#7D96B5">ENERGY FLUX</span>
+            <span style="font:400 8.5px 'Noto Sans JP',sans-serif;color:rgba(140,203,255,.4)">能量</span>
+          </div>
+          <div style="font:600 21px 'JetBrains Mono',monospace;color:#8CCBFF;line-height:1.35">+{{ energyNow }}<span style="font-size:11px">%</span></div>
+          <svg viewBox="0 0 150 30" preserveAspectRatio="none" style="width:100%;height:26px;display:block">
+            <path d="{{ energyMini }}" fill="none" stroke="#8CCBFF" stroke-width="1" stroke-opacity=".85" vector-effect="non-scaling-stroke"></path>
+          </svg>
+        </div>
+        <div style="padding:9px 11px;background:rgba(5,10,22,.72);border:1px solid {{ lvColorSoft }};clip-path:polygon(0 0,100% 0,100% calc(100% - 8px),calc(100% - 8px) 100%,0 100%)">
+          <div style="display:flex;justify-content:space-between;align-items:baseline">
+            <span style="font:500 8px 'Chakra Petch',sans-serif;letter-spacing:.2em;color:#7D96B5">STABILITY</span>
+            <span style="font:400 8.5px 'Noto Sans JP',sans-serif;color:rgba(140,203,255,.4)">安定度</span>
+          </div>
+          <div style="font:600 21px 'JetBrains Mono',monospace;color:{{ lvColor }};line-height:1.35">{{ stabilityStr }}<span style="font-size:11px">%</span></div>
+          <div style="height:4px;background:rgba(140,203,255,.12);margin-top:4px"><span style="display:block;height:100%;background:{{ lvColor }};width:{{ stabilityW }};transition:width .4s linear"></span></div>
+        </div>
+        <div style="padding:9px 11px;background:rgba(5,10,22,.72);border:1px solid rgba(140,203,255,.14);clip-path:polygon(0 0,100% 0,100% calc(100% - 8px),calc(100% - 8px) 100%,0 100%)">
+          <div style="font:500 8px 'Chakra Petch',sans-serif;letter-spacing:.2em;color:#7D96B5;margin-bottom:5px">TELEMETRY</div>
+          <sc-for list="{{ telemetry }}" as="tl" hint-placeholder-count="5">
+            <div style="display:flex;align-items:baseline;justify-content:space-between;gap:8px;padding:1.5px 0">
+              <span style="font:500 9px 'Chakra Petch',sans-serif;letter-spacing:.14em;color:#7D96B5">{{ tl.k }}</span>
+              <span style="font:500 10px 'JetBrains Mono',monospace;color:rgba(231,242,255,.82)">{{ tl.v }}</span>
+            </div>
+          </sc-for>
+        </div>
+      </div>
+
+      <div style="position:absolute;left:0;right:0;bottom:15px;display:flex;flex-direction:column;align-items:center;gap:3px;pointer-events:none">
+        <span style="font:500 15px 'Orbitron',sans-serif;letter-spacing:.34em;color:rgba(231,242,255,.75)">360°</span>
+        <span style="font:500 8px 'Chakra Petch',sans-serif;letter-spacing:.28em;color:rgba(140,203,255,.5)">DRAG TO ROTATE · SCROLL TO ZOOM</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- ===== RIGHT COLUMN ===== -->
+  <div data-nx="col" style="display:flex;flex-direction:column;gap:11px;min-height:0;overflow-y:auto;overflow-x:hidden;padding-right:2px">
+
+    <section style="position:relative;display:flex;padding:1px;background:linear-gradient(150deg,rgba(255,65,108,.55),rgba(217,92,255,.18) 55%,rgba(255,65,108,.35));clip-path:polygon(0 15px,15px 0,100% 0,100% calc(100% - 15px),calc(100% - 15px) 100%,0 100%);animation:nxDanger 3.4s ease-in-out infinite">
+      <div style="flex:1;display:flex;flex-direction:column;background:linear-gradient(168deg,rgba(34,9,24,.94),rgba(9,6,18,.97));clip-path:polygon(0 14px,14px 0,100% 0,100% calc(100% - 14px),calc(100% - 14px) 100%,0 100%)">
+        <div style="display:flex;align-items:center;gap:9px;padding:9px 13px 8px;border-bottom:1px solid rgba(255,65,108,.25);background:linear-gradient(90deg,rgba(255,65,108,.16),rgba(255,65,108,0) 70%)">
+          <span style="width:3px;height:13px;background:linear-gradient(180deg,#FF416C,#D95CFF)"></span>
+          <span style="font:700 14px 'Chakra Petch',sans-serif;letter-spacing:.2em;color:{{ lvColor }}">{{ lvName }}</span>
+          <span style="font:400 10px 'Noto Sans JP',sans-serif;letter-spacing:.14em;color:{{ lvColor }};opacity:.75">{{ lvJp }}</span>
+          <span style="margin-left:auto;display:flex;align-items:center;gap:7px">
+            <span style="width:8px;height:8px;background:{{ lvColor }};animation:nxBlink 1.5s steps(1,end) infinite"></span>
+            <button type="button" onClick="{{ cycleSim }}" style="padding:3px 8px;background:rgba(5,10,22,.6);border:1px solid rgba(140,203,255,.22);color:#7D96B5;font:600 8px 'Chakra Petch',sans-serif;letter-spacing:.14em;cursor:pointer" style-hover="border-color:#8CCBFF;color:#E7F2FF">SIM {{ simTag }}</button>
+          </span>
+        </div>
+        <div style="padding:11px 13px 13px">
+          <div style="font:600 11.5px 'Chakra Petch',sans-serif;letter-spacing:.13em;color:rgba(231,242,255,.9)">{{ lvMsg }}</div>
+          <div style="font:400 10px 'Noto Sans JP',sans-serif;letter-spacing:.05em;color:rgba(231,242,255,.5);margin-top:3px">{{ lvMsgJp }}</div>
+          <div style="display:grid;grid-template-columns:minmax(0,1fr) auto;gap:10px;align-items:end;margin-top:11px">
+            <div>
+              <div style="display:flex;align-items:center;gap:8px">
+                <span style="font:500 8px 'Chakra Petch',sans-serif;letter-spacing:.2em;color:#7D96B5">RISK</span>
+                <span style="display:flex;gap:3px;flex:1">
+                  <sc-for list="{{ riskCells }}" as="rc" hint-placeholder-count="6">
+                    <span style="flex:1;height:7px;background:{{ rc.bg }};transform:skewX(-18deg)"></span>
+                  </sc-for>
+                </span>
+                <span style="font:600 10px 'JetBrains Mono',monospace;color:{{ lvColor }}">{{ riskWord }}</span>
+              </div>
+              <svg viewBox="0 0 160 34" preserveAspectRatio="none" style="width:100%;height:34px;display:block;margin-top:8px">
+                <path d="{{ alertArea }}" fill="rgba(255,65,108,.14)"></path>
+                <path d="{{ alertPath }}" fill="none" stroke="#FF416C" stroke-width="1" vector-effect="non-scaling-stroke"></path>
+              </svg>
+            </div>
+            <div style="text-align:right;padding-left:10px;border-left:1px solid rgba(255,65,108,.22)">
+              <div style="font:500 8px 'Chakra Petch',sans-serif;letter-spacing:.18em;color:#7D96B5">EST. TIME TO CRITICAL</div>
+              <div style="font:700 26px 'Orbitron',sans-serif;letter-spacing:.06em;color:{{ lvColor }};line-height:1.35">{{ eta }}</div>
+              <div style="font:500 8.5px 'JetBrains Mono',monospace;color:#7D96B5">{{ stabilityStr }} % STABILITY</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section style="position:relative;display:flex;padding:1px;flex:1.05;min-height:210px;background:linear-gradient(150deg,rgba(140,203,255,.36),rgba(54,124,255,.10) 45%,rgba(140,203,255,.22));clip-path:polygon(0 15px,15px 0,100% 0,100% calc(100% - 15px),calc(100% - 15px) 100%,0 100%)">
+      <div style="flex:1;display:flex;flex-direction:column;min-height:0;background:linear-gradient(168deg,rgba(8,18,37,.95),rgba(5,10,22,.97));clip-path:polygon(0 14px,14px 0,100% 0,100% calc(100% - 14px),calc(100% - 14px) 100%,0 100%)">
+        <div style="display:flex;align-items:center;gap:9px;padding:9px 13px 8px;border-bottom:1px solid rgba(140,203,255,.16);background:linear-gradient(90deg,rgba(54,124,255,.16),rgba(54,124,255,0) 62%)">
+          <span style="width:3px;height:13px;background:linear-gradient(180deg,#8CCBFF,#367CFF)"></span>
+          <span style="font:600 11.5px 'Chakra Petch',sans-serif;letter-spacing:.18em;color:#E7F2FF">THERMAL IMAGING</span>
+          <span style="font:500 10px 'Chakra Petch',sans-serif;color:rgba(140,203,255,.28)">//</span>
+          <span style="font:400 9.5px 'Noto Sans JP',sans-serif;letter-spacing:.14em;color:rgba(140,203,255,.52)">熱解析</span>
+          <span style="margin-left:auto;font:500 8.5px 'JetBrains Mono',monospace;color:#7D96B5">{{ thermalLabel }}</span>
+        </div>
+        <div style="flex:1;min-height:0;display:grid;grid-template-columns:minmax(0,1fr) 30px 108px;gap:9px;padding:10px 13px 12px">
+          <div style="position:relative;border:1px solid rgba(140,203,255,.16);background:rgba(5,10,22,.72);min-height:120px">
+            <x-import component-from-global-scope="mineral-view" from="./nexori-3d.js" priority="1" mode="thermal" yaw="{{ thermalYaw }}" pitch="{{ thermalPitch }}" heat="{{ heatBias }}" fill="0.82" style="position:absolute;inset:0" hint-size="100%,100%"></x-import>
+            <div style="position:absolute;left:7px;bottom:6px;font:500 8px 'Chakra Petch',sans-serif;letter-spacing:.14em;color:rgba(231,242,255,.45)">SURFACE TEMP DISTRIBUTION</div>
+            <div style="position:absolute;left:0;right:0;top:0;height:1px;background:linear-gradient(90deg,transparent,rgba(255,65,108,.5),transparent);animation:nxTrack 6s linear infinite"></div>
+          </div>
+          <div style="display:flex;flex-direction:column;align-items:center;gap:4px">
+            <span style="font:500 7.5px 'JetBrains Mono',monospace;color:#7D96B5">320</span>
+            <span style="flex:1;width:8px;background:linear-gradient(180deg,#FFC2B4,#FF416C,#E8D46A,#4FC3F5,#1E5FD6,#050A16)"></span>
+            <span style="font:500 7.5px 'JetBrains Mono',monospace;color:#7D96B5">-20</span>
+            <span style="font:500 7px 'Chakra Petch',sans-serif;color:#7D96B5">°C</span>
+          </div>
+          <div style="display:grid;grid-template-columns:repeat(2,minmax(0,1fr));grid-template-rows:repeat(3,minmax(0,1fr));gap:5px;min-height:0">
+            <sc-for list="{{ thermalViews }}" as="tv" hint-placeholder-count="6">
+              <button type="button" onClick="{{ tv.pick }}" style="position:relative;min-height:0;border:1px solid {{ tv.bc }};background:rgba(5,10,22,.72);cursor:pointer;padding:0" style-hover="border-color:#8CCBFF">
+                <x-import component-from-global-scope="mineral-view" from="./nexori-3d.js" mode="thermal" yaw="{{ tv.yaw }}" pitch="{{ tv.pitch }}" heat="{{ heatBias }}" fill="0.7" style="position:absolute;inset:0" hint-size="100%,100%"></x-import>
+                <span style="position:absolute;left:3px;bottom:2px;font:600 7px 'Chakra Petch',sans-serif;letter-spacing:.14em;color:{{ tv.fg }}">{{ tv.name }}</span>
+              </button>
+            </sc-for>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section style="position:relative;display:flex;padding:1px;flex:1;min-height:190px;background:linear-gradient(150deg,rgba(140,203,255,.36),rgba(54,124,255,.10) 45%,rgba(140,203,255,.22));clip-path:polygon(0 15px,15px 0,100% 0,100% calc(100% - 15px),calc(100% - 15px) 100%,0 100%)">
+      <div style="flex:1;display:flex;flex-direction:column;min-height:0;background:linear-gradient(168deg,rgba(8,18,37,.95),rgba(5,10,22,.97));clip-path:polygon(0 14px,14px 0,100% 0,100% calc(100% - 14px),calc(100% - 14px) 100%,0 100%)">
+        <div style="display:flex;align-items:center;gap:9px;padding:9px 13px 8px;border-bottom:1px solid rgba(140,203,255,.16);background:linear-gradient(90deg,rgba(54,124,255,.16),rgba(54,124,255,0) 62%)">
+          <span style="width:3px;height:13px;background:linear-gradient(180deg,#8CCBFF,#367CFF)"></span>
+          <span style="font:600 11.5px 'Chakra Petch',sans-serif;letter-spacing:.18em;color:#E7F2FF">INTERNAL STRUCTURE</span>
+          <span style="font:500 10px 'Chakra Petch',sans-serif;color:rgba(140,203,255,.28)">//</span>
+          <span style="font:400 9.5px 'Noto Sans JP',sans-serif;letter-spacing:.14em;color:rgba(140,203,255,.52)">内部構造</span>
+          <span style="margin-left:auto;font:500 8.5px 'JetBrains Mono',monospace;color:#7D96B5">TOMOGRAPHY</span>
+        </div>
+        <div style="flex:1;min-height:0;display:grid;grid-template-columns:minmax(0,1fr) 132px;gap:9px;padding:10px 13px 12px">
+          <div style="display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:6px;min-height:0">
+            <sc-for list="{{ slices }}" as="s" hint-placeholder-count="3">
+              <div style="position:relative;border:1px solid rgba(140,203,255,.14);background:rgba(5,10,22,.68);min-height:70px">
+                <x-import component-from-global-scope="mineral-view" from="./nexori-3d.js" mode="internal" yaw="{{ s.yaw }}" pitch="0.1" slice="{{ s.slice }}" fill="0.74" style="position:absolute;inset:0" hint-size="100%,100%"></x-import>
+                <span style="position:absolute;left:5px;bottom:4px;font:500 7.5px 'JetBrains Mono',monospace;color:rgba(231,242,255,.5)">{{ s.label }}</span>
+              </div>
+            </sc-for>
+          </div>
+          <div style="display:flex;flex-direction:column;gap:5px;min-height:0">
+            <span style="font:600 8px 'Chakra Petch',sans-serif;letter-spacing:.2em;color:#7D96B5">LAYER ANALYSIS</span>
+            <sc-for list="{{ layers }}" as="ly" hint-placeholder-count="4">
+              <button type="button" onClick="{{ ly.pick }}" style="display:flex;align-items:center;gap:8px;padding:5px 8px;background:{{ ly.bg }};border:1px solid {{ ly.bc }};cursor:pointer;text-align:left;clip-path:polygon(0 0,100% 0,100% calc(100% - 5px),calc(100% - 5px) 100%,0 100%)" style-hover="border-color:#8CCBFF">
+                <span style="font:600 8.5px 'JetBrains Mono',monospace;color:{{ ly.fg }}">{{ ly.tag }}</span>
+                <span style="font:500 9px 'Chakra Petch',sans-serif;letter-spacing:.06em;color:{{ ly.fg }}">{{ ly.name }}</span>
+              </button>
+            </sc-for>
+            <div style="margin-top:auto;padding-top:6px;border-top:1px solid rgba(140,203,255,.12);font:500 8px 'JetBrains Mono',monospace;color:#7D96B5;line-height:1.6">{{ layerNote }}</div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </div>
+
+  <!-- ===== BOTTOM ROW ===== -->
+  <div data-nx="bottom" style="grid-column:1/4;display:grid;grid-template-columns:1.22fr 1fr 1.05fr 1fr;gap:11px;min-height:0">
+
+    <section style="position:relative;display:flex;padding:1px;min-width:0;background:linear-gradient(150deg,rgba(140,203,255,.36),rgba(54,124,255,.10) 45%,rgba(140,203,255,.22));clip-path:polygon(0 15px,15px 0,100% 0,100% calc(100% - 15px),calc(100% - 15px) 100%,0 100%)">
+      <div style="flex:1;display:flex;flex-direction:column;min-width:0;background:linear-gradient(168deg,rgba(8,18,37,.95),rgba(5,10,22,.97));clip-path:polygon(0 14px,14px 0,100% 0,100% calc(100% - 14px),calc(100% - 14px) 100%,0 100%)">
+        <div style="display:flex;align-items:center;gap:9px;padding:8px 13px 7px;border-bottom:1px solid rgba(140,203,255,.16);background:linear-gradient(90deg,rgba(54,124,255,.16),rgba(54,124,255,0) 62%)">
+          <span style="width:3px;height:13px;background:linear-gradient(180deg,#8CCBFF,#367CFF)"></span>
+          <span style="font:600 11px 'Chakra Petch',sans-serif;letter-spacing:.17em;color:#E7F2FF;white-space:nowrap">STABILITY MONITORING</span>
+          <span style="font:400 9px 'Noto Sans JP',sans-serif;letter-spacing:.12em;color:rgba(140,203,255,.5);white-space:nowrap">安定性監視</span>
+          <span style="margin-left:auto;font:500 8px 'JetBrains Mono',monospace;color:#7D96B5">120 ms</span>
+        </div>
+        <div style="flex:1;display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:1px;background:rgba(140,203,255,.1);min-height:0">
+          <sc-for list="{{ metrics }}" as="mt" hint-placeholder-count="4">
+            <div style="background:rgba(5,10,22,.85);padding:8px 9px 6px;display:flex;flex-direction:column;min-width:0;min-height:0">
+              <span style="font:500 8px 'Chakra Petch',sans-serif;letter-spacing:.12em;color:#7D96B5;line-height:1.35;height:22px;overflow:hidden">{{ mt.name }}</span>
+              <span style="font:600 18px 'JetBrains Mono',monospace;color:{{ mt.c }};line-height:1.3">{{ mt.v }}<span style="font-size:10px">%</span></span>
+              <svg viewBox="0 0 120 40" preserveAspectRatio="none" style="flex:1;width:100%;min-height:28px;margin-top:4px;display:block">
+                <path d="{{ mt.area }}" fill="{{ mt.fill }}"></path>
+                <line x1="0" y1="{{ mt.thrY }}" x2="120" y2="{{ mt.thrY }}" stroke="rgba(255,65,108,.45)" stroke-width="1" stroke-dasharray="3 3" vector-effect="non-scaling-stroke"></line>
+                <path d="{{ mt.d }}" fill="none" stroke="{{ mt.c }}" stroke-width="1" vector-effect="non-scaling-stroke"></path>
+              </svg>
+            </div>
+          </sc-for>
+        </div>
+      </div>
+    </section>
+
+    <section style="position:relative;display:flex;padding:1px;min-width:0;background:linear-gradient(150deg,rgba(140,203,255,.36),rgba(54,124,255,.10) 45%,rgba(140,203,255,.22));clip-path:polygon(0 15px,15px 0,100% 0,100% calc(100% - 15px),calc(100% - 15px) 100%,0 100%)">
+      <div style="flex:1;display:flex;flex-direction:column;min-width:0;background:linear-gradient(168deg,rgba(8,18,37,.95),rgba(5,10,22,.97));clip-path:polygon(0 14px,14px 0,100% 0,100% calc(100% - 14px),calc(100% - 14px) 100%,0 100%)">
+        <div style="display:flex;align-items:center;gap:9px;padding:8px 13px 7px;border-bottom:1px solid rgba(140,203,255,.16);background:linear-gradient(90deg,rgba(54,124,255,.16),rgba(54,124,255,0) 62%)">
+          <span style="width:3px;height:13px;background:linear-gradient(180deg,#8CCBFF,#367CFF)"></span>
+          <span style="font:600 11px 'Chakra Petch',sans-serif;letter-spacing:.17em;color:#E7F2FF;white-space:nowrap">ENERGY FLUCTUATION</span>
+          <span style="font:400 9px 'Noto Sans JP',sans-serif;letter-spacing:.12em;color:rgba(140,203,255,.5);white-space:nowrap">能量変動</span>
+          <span style="margin-left:auto;display:flex;align-items:center;gap:5px"><span style="width:5px;height:5px;background:#D95CFF;animation:nxPulse 1.8s ease-in-out infinite"></span><span style="font:500 8px 'JetBrains Mono',monospace;color:#D95CFF">LIVE</span></span>
+        </div>
+        <div style="flex:1;display:flex;flex-direction:column;padding:9px 13px 10px;min-height:0;gap:8px">
+          <div style="flex:1;position:relative;border:1px solid rgba(140,203,255,.1);background:linear-gradient(rgba(140,203,255,.03) 1px,transparent 1px) 0 0/100% 25%,rgba(5,10,22,.6);min-height:0">
+            <svg viewBox="0 0 240 90" preserveAspectRatio="none" style="position:absolute;inset:0;width:100%;height:100%">
+              <path d="{{ energyArea }}" fill="rgba(54,124,255,.16)"></path>
+              <path d="{{ energyBase }}" fill="none" stroke="rgba(140,203,255,.35)" stroke-width="1" vector-effect="non-scaling-stroke"></path>
+              <path d="{{ energyPath }}" fill="none" stroke="#8CCBFF" stroke-width="1.2" vector-effect="non-scaling-stroke"></path>
+              <path d="{{ energyGhost }}" fill="none" stroke="#FF416C" stroke-width="1" stroke-opacity=".7" vector-effect="non-scaling-stroke"></path>
+              <circle cx="{{ peakX }}" cy="{{ peakY }}" r="2.4" fill="#D95CFF"></circle>
+            </svg>
+          </div>
+          <div style="display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:8px">
+            <div>
+              <div style="font:600 15px 'JetBrains Mono',monospace;color:#8CCBFF">+{{ energyNow }}<span style="font-size:9px">%</span></div>
+              <div style="font:500 7.5px 'Chakra Petch',sans-serif;letter-spacing:.18em;color:#7D96B5">ENERGY FLUX</div>
+            </div>
+            <div>
+              <div style="font:600 15px 'JetBrains Mono',monospace;color:#E7F2FF">{{ resonance }}<span style="font-size:9px"> Hz</span></div>
+              <div style="font:500 7.5px 'Chakra Petch',sans-serif;letter-spacing:.18em;color:#7D96B5">RESONANCE</div>
+            </div>
+            <div>
+              <div style="font:600 15px 'JetBrains Mono',monospace;color:#FF416C">{{ peakVal }}<span style="font-size:9px">%</span></div>
+              <div style="font:500 7.5px 'Chakra Petch',sans-serif;letter-spacing:.18em;color:#7D96B5">PEAK</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section style="position:relative;display:flex;padding:1px;min-width:0;background:linear-gradient(150deg,rgba(140,203,255,.36),rgba(54,124,255,.10) 45%,rgba(140,203,255,.22));clip-path:polygon(0 15px,15px 0,100% 0,100% calc(100% - 15px),calc(100% - 15px) 100%,0 100%)">
+      <div style="flex:1;display:flex;flex-direction:column;min-width:0;background:linear-gradient(168deg,rgba(8,18,37,.95),rgba(5,10,22,.97));clip-path:polygon(0 14px,14px 0,100% 0,100% calc(100% - 14px),calc(100% - 14px) 100%,0 100%)">
+        <div style="display:flex;align-items:center;gap:9px;padding:8px 13px 7px;border-bottom:1px solid rgba(140,203,255,.16);background:linear-gradient(90deg,rgba(54,124,255,.16),rgba(54,124,255,0) 62%)">
+          <span style="width:3px;height:13px;background:linear-gradient(180deg,#8CCBFF,#367CFF)"></span>
+          <span style="font:600 11px 'Chakra Petch',sans-serif;letter-spacing:.17em;color:#E7F2FF;white-space:nowrap">ENVIRONMENTAL RESPONSE</span>
+          <span style="font:400 9px 'Noto Sans JP',sans-serif;letter-spacing:.12em;color:rgba(140,203,255,.5);white-space:nowrap">環境反応</span>
+        </div>
+        <div style="flex:1;display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:8px;padding:9px 13px 11px;min-height:0">
+          <sc-for list="{{ envs }}" as="ev" hint-placeholder-count="3">
+            <button type="button" onClick="{{ ev.pick }}" style="display:flex;flex-direction:column;gap:5px;padding:6px;background:{{ ev.bg }};border:1px solid {{ ev.bc }};cursor:pointer;min-height:0;min-width:0;text-align:left;clip-path:polygon(0 0,100% 0,100% calc(100% - 7px),calc(100% - 7px) 100%,0 100%)" style-hover="border-color:#8CCBFF">
+              <span style="flex:1;position:relative;min-height:44px;border:1px solid rgba(140,203,255,.1);background:rgba(5,10,22,.65);display:block">
+                <x-import component-from-global-scope="mineral-view" from="./nexori-3d.js" mode="{{ ev.mode }}" yaw="{{ ev.yaw }}" pitch="0.12" fill="0.72" style="position:absolute;inset:0" hint-size="100%,100%"></x-import>
+              </span>
+              <span style="font:500 8px 'Chakra Petch',sans-serif;letter-spacing:.16em;color:#7D96B5">{{ ev.label }}</span>
+              <span style="display:flex;align-items:baseline;justify-content:space-between;gap:4px">
+                <span style="font:600 12px 'JetBrains Mono',monospace;color:#E7F2FF">{{ ev.temp }}</span>
+                <span style="font:600 8px 'Chakra Petch',sans-serif;letter-spacing:.1em;color:{{ ev.fg }}">{{ ev.state }}</span>
+              </span>
+            </button>
+          </sc-for>
+        </div>
+      </div>
+    </section>
+
+    <section style="position:relative;display:flex;padding:1px;min-width:0;background:linear-gradient(150deg,rgba(140,203,255,.36),rgba(54,124,255,.10) 45%,rgba(140,203,255,.22));clip-path:polygon(0 15px,15px 0,100% 0,100% calc(100% - 15px),calc(100% - 15px) 100%,0 100%)">
+      <div style="flex:1;display:flex;flex-direction:column;min-width:0;background:linear-gradient(168deg,rgba(8,18,37,.95),rgba(5,10,22,.97));clip-path:polygon(0 14px,14px 0,100% 0,100% calc(100% - 14px),calc(100% - 14px) 100%,0 100%)">
+        <div style="display:flex;align-items:center;gap:9px;padding:8px 13px 7px;border-bottom:1px solid rgba(140,203,255,.16);background:linear-gradient(90deg,rgba(54,124,255,.16),rgba(54,124,255,0) 62%)">
+          <span style="width:3px;height:13px;background:linear-gradient(180deg,#8CCBFF,#367CFF)"></span>
+          <span style="font:600 11px 'Chakra Petch',sans-serif;letter-spacing:.17em;color:#E7F2FF;white-space:nowrap">RESEARCH LOG</span>
+          <span style="font:400 9px 'Noto Sans JP',sans-serif;letter-spacing:.12em;color:rgba(140,203,255,.5);white-space:nowrap">研究記録</span>
+          <span style="margin-left:auto;font:500 8px 'JetBrains Mono',monospace;color:#7D96B5">{{ logCount }}</span>
+        </div>
+        <div style="flex:1;overflow-y:auto;padding:5px 13px 10px;min-height:0">
+          <sc-for list="{{ log }}" as="lg" hint-placeholder-count="7">
+            <div style="display:grid;grid-template-columns:48px minmax(0,1fr);gap:9px;padding:4px 0;border-bottom:1px solid rgba(140,203,255,.06)">
+              <span style="font:500 9px 'JetBrains Mono',monospace;color:{{ lg.c }}">{{ lg.time }}</span>
+              <span style="font:400 9.5px 'Chakra Petch',sans-serif;letter-spacing:.03em;color:rgba(231,242,255,.64);line-height:1.45">{{ lg.msg }}</span>
+            </div>
+          </sc-for>
+        </div>
+      </div>
+    </section>
+  </div>
+
+  <footer data-nx="span" style="grid-column:1/4;display:flex;align-items:center;justify-content:space-between;gap:16px;padding:5px 2px 0;border-top:1px solid rgba(140,203,255,.12)">
+    <span style="font:600 8.5px 'Chakra Petch',sans-serif;letter-spacing:.26em;color:#7D96B5">NEXORI RESEARCH · V2.0 · MATTER · CONSCIOUSNESS · POSSIBILITIES</span>
+    <span style="font:500 8.5px 'Chakra Petch',sans-serif;letter-spacing:.24em;color:rgba(140,203,255,.45)">ALL FIGURES SIMULATED 模擬資料 · まだ見ぬ世界が、ここにある。</span>
+  </footer>
+</div>
