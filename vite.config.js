@@ -7,9 +7,4 @@ const repoBase = '/nexori-research-dashboard/';
 export default defineConfig(({ command }) => ({
   base: command === 'build' ? repoBase : '/',
   plugins: [react()],
-  server: {
-    port: 5174,
-    strictPort: true,
-    open: true,
-  },
 }));

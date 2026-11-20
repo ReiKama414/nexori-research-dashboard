@@ -36,7 +36,7 @@ npm run dev
 
 | 指令 | 用途 |
 | --- | --- |
-| `npm run dev` | 開發伺服器（埠 **5174**） |
+| `npm run dev` | 開發伺服器（Vite 預設埠，通常為 **5173**） |
 | `npm run build` | 產出 `dist/` |
 | `npm run preview` | 本機預覽正式版 |
 

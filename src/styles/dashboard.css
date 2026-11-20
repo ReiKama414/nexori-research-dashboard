@@ -451,3 +451,74 @@ footer[data-nx='span'] > span {
     display: none !important;
   }
 }
+
+[data-nx='stagerail'].nx-stagerail {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  width: min(156px, 28vw);
+  min-width: 0;
+  max-width: 156px;
+  box-sizing: border-box;
+  pointer-events: auto;
+}
+
+.nx-stagerail-label {
+  font: 600 8.5px 'Chakra Petch', sans-serif;
+  letter-spacing: 0.18em;
+  color: #7d96b5;
+  margin-bottom: 2px;
+}
+
+.nx-stage-mode-btn {
+  display: flex;
+  align-items: center;
+  gap: 9px;
+  width: 100%;
+  box-sizing: border-box;
+  padding: 7px 10px;
+  font: 600 9px 'Chakra Petch', sans-serif;
+  letter-spacing: 0.14em;
+  cursor: pointer;
+  text-align: left;
+  clip-path: polygon(0 0, 100% 0, 100% calc(100% - 6px), calc(100% - 6px) 100%, 0 100%);
+}
+
+.nx-stage-mode-name {
+  min-width: 0;
+  overflow-wrap: anywhere;
+}
+
+.nx-stage-depth {
+  width: 100%;
+  box-sizing: border-box;
+  margin-top: 4px;
+  padding: 8px 8px 9px;
+  background: rgba(5, 10, 22, 0.78);
+  border: 1px solid rgba(140, 203, 255, 0.2);
+}
+
+.nx-stage-depth-title {
+  font: 500 8px 'Chakra Petch', sans-serif;
+  letter-spacing: 0.14em;
+  color: #7d96b5;
+  margin-bottom: 7px;
+}
+
+.nx-stage-depth-row {
+  display: grid;
+  grid-template-columns: repeat(5, minmax(0, 1fr));
+  gap: 4px;
+  width: 100%;
+  min-width: 0;
+}
+
+.nx-stage-depth-btn {
+  min-width: 0;
+  height: 22px;
+  padding: 0 1px;
+  font: 600 7.5px 'JetBrains Mono', monospace;
+  letter-spacing: 0.04em;
+  cursor: pointer;
+  box-sizing: border-box;
+}

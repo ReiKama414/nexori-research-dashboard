@@ -199,38 +199,38 @@ export function DashboardBody({ v }) {
               </button>
             </div>
       
-            <div data-nx="stagerail" style={{ position: "absolute", left: "16px", top: "54px", display: "flex", flexDirection: "column", gap: "5px", width: "132px" }}>
-              <span style={{ font: "600 8.5px 'Chakra Petch',sans-serif", letterSpacing: ".24em", color: "#7D96B5", marginBottom: "2px" }}>SCAN LAYERS</span>
+            <div data-nx="stagerail" className="nx-stagerail" style={{ position: "absolute", left: "16px", top: "54px" }}>
+              <span className="nx-stagerail-label">SCAN LAYERS</span>
               {v.modes.map((m, i) => (
             <React.Fragment key={m.name ?? m.label ?? m.tag ?? m.time ?? m.k}>
-              <button type="button" onClick={m.onClick} style={{ display: "flex", alignItems: "center", gap: "9px", padding: "7px 10px", background: m.bg, border: `1px solid ${m.bc}`, color: m.fg, font: "600 9px 'Chakra Petch',sans-serif", letterSpacing: ".17em", cursor: "pointer", textAlign: "left", clipPath: "polygon(0 0,100% 0,100% calc(100% - 6px),calc(100% - 6px) 100%,0 100%)" }} >
-                  <span style={{ width: "7px", height: "7px", transform: "rotate(45deg)", border: `1px solid ${m.fg}`, background: m.dot }}></span>{m.name}
+              <button type="button" className="nx-stage-mode-btn" onClick={m.onClick} style={{ background: m.bg, border: `1px solid ${m.bc}`, color: m.fg }}>
+                  <span style={{ width: "7px", height: "7px", transform: "rotate(45deg)", border: `1px solid ${m.fg}`, background: m.dot, flexShrink: 0 }}></span>
+                  <span className="nx-stage-mode-name">{m.name}</span>
                 </button>
             </React.Fragment>
           ))}
-              {v.sliceOpen && (<><div style={{ marginTop: "4px", padding: "8px 10px", background: "rgba(5,10,22,.78)", border: "1px solid rgba(140,203,255,.2)" }}>
-                  <div style={{ font: "500 8px 'Chakra Petch',sans-serif", letterSpacing: ".18em", color: "#7D96B5", marginBottom: "7px" }}>SECTION DEPTH</div>
-                  <div style={{ display: "flex", gap: "3px" }}>
+              {v.sliceOpen && (
+                <div className="nx-stage-depth">
+                  <div className="nx-stage-depth-title">SECTION DEPTH</div>
+                  <div className="nx-stage-depth-row">
                     {v.depths.map((d) => (
                       <button
                         key={d.label}
                         type="button"
+                        className="nx-stage-depth-btn"
                         onClick={d.onClick}
                         style={{
-                          flex: "1",
-                          height: "21px",
                           background: d.bg,
                           border: `1px solid ${d.bc}`,
                           color: d.fg,
-                          font: "600 8px 'JetBrains Mono',monospace",
-                          cursor: "pointer",
                         }}
                       >
                         {d.label}
                       </button>
                     ))}
                   </div>
-                </div></>)}
+                </div>
+              )}
             </div>
       
             <div style={{ position: "absolute", left: "16px", bottom: "16px", display: "flex", flexDirection: "column", gap: "8px", pointerEvents: "none" }}>

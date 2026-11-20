@@ -151,6 +151,25 @@ export function useDashboard(options = {}) {
   const cycleSim = useCallback(() => setS((p) => ({ ...p, sim: p.sim >= 3 ? -1 : p.sim + 1 })), []);
   const setField = useCallback((key, value) => setS((p) => ({ ...p, [key]: value })), []);
 
+  const setEnv = useCallback((index) => {
+    const e = ENVS[index];
+    if (!e) return;
+    setS((p) => {
+      const now = new Date();
+      const p2 = (n) => String(n).padStart(2, '0');
+      const time = `${p2(now.getHours())}:${p2(now.getMinutes())}`;
+      return {
+        ...p,
+        env: index,
+        mode: e.mode,
+        log: [
+          { time, msg: `Chamber → ${e.label} (${e.temp}) · ${e.state}` },
+          ...p.log,
+        ].slice(0, 16),
+      };
+    });
+  }, []);
+
   const v = useMemo(() => {
     const crit = Number(opts.criticalThreshold);
     const lv = levelFor(s.stability, crit);
@@ -160,6 +179,9 @@ export function useDashboard(options = {}) {
     const secs = Math.max(0, Math.round((s.stability - 4) * 9.5));
     const peakIdx = s.energy.length ? s.energy.indexOf(Math.max(...s.energy)) : 0;
     const spectra = spectraRef.current;
+    const envPick = ENVS[s.env] || ENVS[1];
+    const envTempC = [-200, 25, 300][s.env] ?? 25;
+    const envHeat = [0, 0.1, 0.38][s.env] ?? 0.1;
 
     return {
       clock: s.clock || '—',
@@ -232,7 +254,7 @@ export function useDashboard(options = {}) {
         { k: 'Y', v: (438.7 + Math.cos(s.t * 0.04) * 0.5).toFixed(1) },
         { k: 'Z', v: (-112.9 + Math.sin(s.t * 0.03) * 0.4).toFixed(1) },
         { k: 'ROT', v: ((s.t * 0.11) % 360).toFixed(1) + '°' },
-        { k: 'TEMP', v: (-200 + (100 - s.stability) * 0.4).toFixed(1) + ' °C' },
+        { k: 'TEMP', v: (envTempC + (100 - s.stability) * (s.env === 2 ? 0.45 : s.env === 0 ? 0.12 : 0.06)).toFixed(1) + ' °C' },
         { k: 'PRES', v: '1,024 atm' },
       ],
       energyNow: (last(s.energy) - 60).toFixed(1),
@@ -250,7 +272,9 @@ export function useDashboard(options = {}) {
       thermalYaw: String(TVIEWS[s.tv].yaw),
       thermalPitch: String(TVIEWS[s.tv].pitch),
       thermalLabel: TVIEWS[s.tv].name + ' VIEW',
-      heatBias: ((100 - s.stability) / 400).toFixed(2),
+      heatBias: ((100 - s.stability) / 400 + envHeat).toFixed(2),
+      envLabel: envPick.label,
+      envState: envPick.state,
       thermalViews: TVIEWS.map((tv, i) => ({
         name: tv.name,
         yaw: String(tv.yaw),
@@ -294,9 +318,12 @@ export function useDashboard(options = {}) {
         mode: e.mode,
         yaw: String(e.yaw),
         fg: e.fg,
-        onClick: () => setField('env', i),
-        bg: s.env === i ? 'rgba(54,124,255,.12)' : 'rgba(5,10,22,.55)',
-        bc: s.env === i ? 'rgba(140,203,255,.45)' : 'rgba(140,203,255,.12)',
+        onClick: () => setEnv(i),
+        bg: s.env === i ? 'rgba(54,124,255,.16)' : 'rgba(5,10,22,.55)',
+        bc: s.env === i
+          ? (e.fg === '#FF416C' ? 'rgba(255,65,108,.55)' : 'rgba(140,203,255,.45)')
+          : 'rgba(140,203,255,.12)',
+        active: s.env === i,
       })),
       log: s.log.map((l, i) => ({
         time: l.time,
@@ -305,7 +332,7 @@ export function useDashboard(options = {}) {
       })),
       logCount: s.log.length + ' ENTRIES',
     };
-  }, [opts.criticalThreshold, s, setField, cycleSim, toggleAuto]);
+  }, [opts.criticalThreshold, s, setField, setEnv, cycleSim, toggleAuto]);
 
   return v;
 }

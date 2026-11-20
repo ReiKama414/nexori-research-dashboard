@@ -36,7 +36,7 @@ npm run dev
 
 | Command | Purpose |
 | --- | --- |
-| `npm run dev` | Dev server (port **5174**) |
+| `npm run dev` | Dev server (Vite default port, usually **5173**) |
 | `npm run build` | Production bundle → `dist/` |
 | `npm run preview` | Serve `dist/` locally |
 

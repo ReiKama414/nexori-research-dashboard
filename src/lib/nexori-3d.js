@@ -230,7 +230,7 @@
     attributeChangedCallback() { if (this._three) this._apply(); else this._pending = true; }
     _apply() {
       const mode = this.getAttribute('mode') || 'surface';
-      const map = { surface: 0, thermal: 1, internal: 2, section: 2, energy: 5 };
+      const map = { surface: 0, thermal: 1, internal: 2, section: 2, energy: 5, cold: 3, hot: 4 };
       this._mat.uniforms.uMode.value = map[mode] != null ? map[mode] : 0;
       this._wire.visible = (mode === 'internal' || mode === 'section' || mode === 'energy');
       this._plane.constant = mode === 'section' ? parseFloat(this.getAttribute('slice') || '0.1') : 10;
