@@ -4,7 +4,7 @@
 
 [English](./README.md) · **繁體中文**
 
-[ReiKama414](https://github.com/ReiKama414) · [個人網站](https://reikama414.vercel.app/) · [快速開始](#快速開始) · [授權](./LICENSE)
+[ReiKama414](https://github.com/ReiKama414) · [個人網站](https://reikama414.vercel.app/) · [線上預覽](https://reikama414.github.io/nexori-research-dashboard/) · [快速開始](#快速開始) · [授權](./LICENSE)
 
 ---
 

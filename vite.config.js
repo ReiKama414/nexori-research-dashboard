@@ -1,11 +1,15 @@
 import { defineConfig } from 'vite';
 import react from '@vitejs/plugin-react';
 
-export default defineConfig({
+/** GitHub Pages project site: https://reikama414.github.io/nexori-research-dashboard/ */
+const repoBase = '/nexori-research-dashboard/';
+
+export default defineConfig(({ command }) => ({
+  base: command === 'build' ? repoBase : '/',
   plugins: [react()],
   server: {
     port: 5174,
     strictPort: true,
     open: true,
   },
-});
+}));
